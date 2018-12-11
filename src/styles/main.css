@@ -1,0 +1,68 @@
+/*** GENERAL STYLES ***/
+/* Mobile */
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+/* Desktop */
+@media (min-width: 80rem) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
+
+/*** Main ***/
+.container {
+  max-width: 80rem;
+  padding-bottom: 7.5rem;
+  padding-top: 7.5rem;
+}
+#main {
+  background: #f4f5f6;
+  height: 100vh;
+  position: relative;
+  font-family: "Rouge Script", cursive;
+}
+
+/* Mobile */
+#main h1 {
+  position: absolute;
+  width: 100%;
+  padding-top: 10vh;
+  text-align: center;
+  color: white;
+  font-size: 9rem;
+}
+/* Desktop */
+@media (min-width: 80rem) {
+  #main h1 {
+    font-size: 20rem;
+  }
+}
+
+.main-image {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-image.mobile {
+  background-image: url("/images/main-mobile.jpg");
+}
+.main-image.desktop {
+  background-image: url("/images/main-desktop.jpg");
+}
