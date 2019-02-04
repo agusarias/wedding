@@ -16,13 +16,14 @@
 		<link rel="stylesheet" href="styles/main.css">
 
 		<script src="scripts/main.js"></script>
+		<script src="scripts/map.js"></script>
 		<script defer type="text/javascript"
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByvuFjkGQtQ2ThzJr_j3bholSTnZLaScM&v=3.31&language=es&libraries=places,geometry&callback=createMap"></script>
 	</head>
 
 	<body>
-		<main class="wrapper">
-			<header id="main">
+		<div class="wrapper">
+			<header id="header">
 				<img class="main-image mobile"
 					src="images/main-mobile.jpg" alt="Agus y Nare.">
 				<img class="main-image desktop"
@@ -31,38 +32,56 @@
 			</header>
 
 			<section class="container">
-				<h2>La fiesta</h2>
-				<p>Te esperamos el 23.03.2019 a las 19:00hs para comer, bailar, tomar y
-					celebrar nuestro casamiento!</p>
-			</section>
-			<section class="container">
-				<h2>Cómo llegar</h2>
-				<p>Tomar acceso oeste hasta la bajada Graham Bell, agarrar
-					por Edison <br>
-					Dejar el auto afuera, va a haber seguridad toda la noche.
-				</p>
+				<h1>Agus & Nare</h1>
 			</section>
 
-			<div class="map-container">
-				<div id="map"></div>
-				<a id="hidden-map-link"
-					style="display:none;"
-					target="_blank"
-					href="https://www.google.com/maps/place/34%C2%B037'51.9%22S+58%C2%B046'10.1%22W/@-34.6310782,-58.7716724,17z"></a>
+			<section class="trigger-container">
+				<div class="trigger civil" id="trigger-civil">El civil</div>
+				<div class="trigger fiesta" id="trigger-fiesta">La fiesta</div>
+			</section>
+
+
+			<div class="modal" id="modal-civil">
+				<div class="close" id="modal-close-civil">VOLVER</div>
+				<section class="container">
+					<h2>El civil</h2>
+					<p>Te esperamos el 23.03.2019 a las 19:00hs para comer, bailar, tomar y
+						celebrar nuestro casamiento!</p>
+				</section>
 			</div>
 
-			<section class="container">
-				<h2>Nos querés regalar algo?</h2>
-				<p>No es necesario. Si tenés muchas ganas, podés colaborar con nuestra luna
-					de miel. </p>
-			</section>
+			<div class="modal" id="modal-fiesta">
+				<div class="close" id="modal-close-fiesta">VOLVER</div>
+				<section class="container">
+					<h2>La fiesta</h2>
+					<p>Te esperamos el 23.03.2019 a las 19:00hs para comer, bailar, tomar y
+						celebrar nuestro casamiento!</p>
+					<p>Tomar acceso oeste hasta la bajada Graham Bell, agarrar
+						por Edison <br>
+						Dejar el auto afuera, va a haber seguridad toda la noche.
+					</p>
+				</section>
+
+				<div class="map-container">
+					<div id="map"></div>
+					<a id="hidden-map-link"
+						style="display:none;"
+						target="_blank"
+						href="https://www.google.com/maps/place/34%C2%B037'51.9%22S+58%C2%B046'10.1%22W/@-34.6310782,-58.7716724,17z"></a>
+				</div>
+
+				<section class="container">
+					<h2>Nos querés regalar algo?</h2>
+					<p>No es necesario. Si tenés muchas ganas, podés colaborar con nuestra luna
+						de miel. </p>
+				</section>
+			</div>
 
 			<footer class="footer">
 				<section class="container">
-					<p>Hecho con ♥ por Agus y Nare.
-					</section>
-				</footer>
-
-			</main>
-		</body>
-	</html>
+					<p>Hecho con ♥ por Agus y Nare.</p>
+				</section>
+			</footer>
+		</div>
+	</body>
+</html>

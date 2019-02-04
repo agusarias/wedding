@@ -24,8 +24,8 @@
   padding-bottom: 5rem;
 }
 
-/*** Main ***/
-#main {
+/*** Header ***/
+#header {
   background: #f4f5f6;
   height: 100vh;
   position: relative;
@@ -36,13 +36,12 @@
 /* Mobile */
 .down {
   position: absolute;
+  bottom: 10px;
   width: 100%;
-  padding-top: 95vh;
   text-align: center;
   font-family: "Rouge Script", cursive;
   color: white;
   font-size: 2rem;
-  padding-right: 27px;
   cursor: pointer;
 }
 
@@ -51,6 +50,63 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.trigger-container {
+  margin: auto;
+  max-width: 80rem;
+  display: flex;
+  justify-content: space-around;
+}
+.trigger {
+  background: #888888;
+  flex: 50%;
+  padding: 8vw;
+  min-height: 12vh;
+  max-height: 18vh;
+  text-align: center;
+  color: white;
+  background-size: cover;
+}
+
+.trigger.civil {
+  background-image: url(../images/civil2.jpg);
+}
+
+.trigger.fiesta {
+  background-image: url(../images/fiesta.jpg);
+}
+
+/* Modals */
+.modal {
+  background: #f4f5f6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+.modal .close {
+  cursor: pointer;
+  position: absolute;
+  right: 4vw;
+  top: 2vh;
+  border: none;
+  z-index: 999;
+}
+.modal .close:hover {
+  font-weight: bold;
 }
 
 #map {
