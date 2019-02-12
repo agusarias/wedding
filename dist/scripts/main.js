@@ -4,6 +4,10 @@ function find(id) {
   return document.getElementById(id);
 }
 
+function find(id) {
+  return document.getElementById(id);
+}
+
 // Init
 document.addEventListener("DOMContentLoaded", function() {
   var header = find("header");
@@ -21,9 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
     find("trigger-" + key).onclick = function() {
       var modal = find("modal-" + key);
       modal.classList.add("active");
-      find("modal-close-" + key).onclick = function() {
-        modal.classList.remove("active");
-      };
+      modal.querySelectorAll(".js-close").forEach(function(closeButton) {
+        closeButton.onclick = function() {
+          modal.classList.remove("active");
+        };
+      });
     };
   });
 });

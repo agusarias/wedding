@@ -122,14 +122,25 @@
   transition: opacity 0.5s;
 }
 
-.modal .close {
-  cursor: pointer;
+.modal .top-close {
   position: absolute;
   right: 4vw;
   top: 2vh;
+}
+
+.modal .bottom-close {
+  position: absolute;
+  right: 4vw;
+  bottom: 2vh;
+  text-align: center;
+}
+
+.modal .close {
+  cursor: pointer;
   border: none;
   z-index: 999;
 }
+
 .modal .close:hover {
   font-weight: bold;
 }
