@@ -21,6 +21,7 @@
   padding-top: 1rem;
 }
 .map-container {
+  max-width: 80rem;
   padding-bottom: 5rem;
 }
 
@@ -52,21 +53,35 @@
   transform: translate(-50%, -50%);
 }
 
+/* AGUS y NARE */
+.agusynare {
+  text-align: center;
+  font-size: 7rem;
+}
+
 .trigger-container {
   margin: auto;
-  max-width: 80rem;
+  max-width: 100rem;
   display: flex;
+  margin-bottom: 5vh;
   justify-content: space-around;
 }
 .trigger {
+  cursor: pointer;
   background: #888888;
   flex: 50%;
-  padding: 8vw;
-  min-height: 12vh;
-  max-height: 18vh;
+  padding: 11vw;
+  font-size: 42pt;
+  line-height: 1;
+  min-height: 21vh;
+  max-height: 38vh;
   text-align: center;
   color: white;
   background-size: cover;
+}
+
+.trigger:hover {
+  opacity: 0.7;
 }
 
 .trigger.civil {
@@ -74,17 +89,27 @@
 }
 
 .trigger.fiesta {
-  background-image: url(../images/fiesta.jpg);
+  background-image: url(../images/fiesta-mobile.jpg);
+}
+
+/* Desktop */
+@media (min-width: 80rem) {
+  .trigger {
+    line-height: 0;
+  }
+  .trigger.fiesta {
+    background-image: url(../images/fiesta-desktop.jpg);
+  }
 }
 
 /* Modals */
 .modal {
   background: #f4f5f6;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: 101;
   visibility: hidden;
   opacity: 0;
@@ -109,7 +134,31 @@
   font-weight: bold;
 }
 
-#map {
+.modal .modal-content {
+  overflow-y: auto;
+  position: absolute;
   width: 100%;
-  height: 70vh;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.map {
+  width: 100%;
+  height: 40vh;
+}
+
+/* Desktop */
+@media (min-width: 80rem) {
+  .map {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .map-container {
+    margin: 0 auto;
+  }
+}
+
+.footer p {
+  text-align: center;
 }

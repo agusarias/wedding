@@ -15,10 +15,11 @@
 		<link rel="stylesheet" href="lib/milligram/dist/milligram.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 
+		<link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
 		<script src="scripts/main.js"></script>
 		<script src="scripts/map.js"></script>
 		<script defer type="text/javascript"
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByvuFjkGQtQ2ThzJr_j3bholSTnZLaScM&v=3.31&language=es&libraries=places,geometry&callback=createMap"></script>
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByvuFjkGQtQ2ThzJr_j3bholSTnZLaScM&v=quarterly&language=es&libraries=places,geometry&callback=createMap"></script>
 	</head>
 
 	<body>
@@ -32,49 +33,88 @@
 			</header>
 
 			<section class="container">
-				<h1>Agus & Nare</h1>
+				<h1 class="agusynare">Agus & Nare</h1>
 			</section>
 
 			<section class="trigger-container">
 				<div class="trigger civil" id="trigger-civil">El civil</div>
+			</section>
+			<section class="trigger-container">
 				<div class="trigger fiesta" id="trigger-fiesta">La fiesta</div>
 			</section>
-
-
+			<!-- <section class="trigger-container">
+				<div class="trigger civil" id="trigger-civil">El civil</div>
+				<div class="trigger fiesta" id="trigger-fiesta">La fiesta</div>
+			</section> -->
 			<div class="modal" id="modal-civil">
 				<div class="close" id="modal-close-civil">VOLVER</div>
-				<section class="container">
-					<h2>El civil</h2>
-					<p>Te esperamos el 23.03.2019 a las 19:00hs para comer, bailar, tomar y
-						celebrar nuestro casamiento!</p>
-				</section>
+				<div class="modal-content">
+					<section class="container">
+						<h2>El civil</h2>
+						<p>Si nos querés ver poniendo el gancho y tirarnos arroz, te esperamos el
+							lunes 11 de Marzo a las 13:00hs en el Museo Sivori<br>
+							Y después, st tenés ganas, podés quedarte celebrando con nosotros
+							comiendo y tomando algo en Williamsburgh, a unos metros del museo.</p>
+					</section>
+
+					<section class="container">
+						<h3>Ubicación</h3>
+					</section>
+
+					<div class="map-container">
+						<div id="mapcivil" class="map"></div>
+						<a id="mapcivil-hidden-link"
+							style="display:none;"
+							target="_blank"
+							href="https://www.google.com/maps/place/Museo+S%C3%ADvori/@-34.5691316,-58.4201594,17z/data=!4m8!1m2!3m1!2sMuseo+S%C3%ADvori!3m4!1s0x0:0x4808624945a2ee39!8m2!3d-34.5691317!4d-58.4179705"></a>
+					</div>
+				</div>
 			</div>
 
 			<div class="modal" id="modal-fiesta">
 				<div class="close" id="modal-close-fiesta">VOLVER</div>
-				<section class="container">
-					<h2>La fiesta</h2>
-					<p>Te esperamos el 23.03.2019 a las 19:00hs para comer, bailar, tomar y
-						celebrar nuestro casamiento!</p>
-					<p>Tomar acceso oeste hasta la bajada Graham Bell, agarrar
-						por Edison <br>
-						Dejar el auto afuera, va a haber seguridad toda la noche.
-					</p>
-				</section>
+				<div class="modal-content">
+					<section class="container">
+						<!-- TODO Agregar fondo en título -->
+						<h2>La fiesta</h2>
+						<p>El 23 de Marzo a las 19:00hs festejamos nuestro
+							casamiento y también aprovechamos para despedirnos antes del
+							viaje ¡Nos encantaría que vengas!
+						</p>
 
-				<div class="map-container">
-					<div id="map"></div>
-					<a id="hidden-map-link"
-						style="display:none;"
-						target="_blank"
-						href="https://www.google.com/maps/place/34%C2%B037'51.9%22S+58%C2%B046'10.1%22W/@-34.6310782,-58.7716724,17z"></a>
+						<h3>Cómo llego?</h3>
+						<p>La quinta está ubicada a cuatro cuadras de la bajada Graham Bell del
+							Acceso Oeste. Recomendamos doblar en Belgrano y no en Bouchard, como
+							muestra el camino del mapa.<br>
+							El auto lo podés dejar afuera, va a haber seguridad toda la noche.
+						</p>
+					</section>
+
+					<div class="map-container">
+						<div id="mapfiesta" class="map"></div>
+						<a id="mapfiesta-hidden-link"
+							style="display:none;"
+							target="_blank"
+							href="https://www.google.com/maps/place/34%C2%B037'51.9%22S+58%C2%B046'10.1%22W/@-34.6310782,-58.7716724,17z"></a>
+					</div>
+
+					<section class="container">
+						<h3>Cómo me visto?</h3>
+						<p>Como quieras! Solo tené presente que vamos a estar bailando y caminando
+							sobre pasto toda la noche.
+						</p>
+
+						<h3>Nos querés regalar algo?</h3>
+						<p>Con tu presencia en la fiesta es más que suficiente! Pero, si tenés
+							ganas
+							podés colaborar con nuestra luna de miel ♥ <br>
+							CBU: 0720035988000038258886</p>
+
+						<br>
+						<!-- TODO: Agregar volver -->
+						<div class="sclose-down">VOLVER</div>
+					</section>
 				</div>
-
-				<section class="container">
-					<h2>Nos querés regalar algo?</h2>
-					<p>No es necesario. Si tenés muchas ganas, podés colaborar con nuestra luna
-						de miel. </p>
-				</section>
 			</div>
 
 			<footer class="footer">

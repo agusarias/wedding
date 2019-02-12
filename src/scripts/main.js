@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
     window.scrollBy({
       top: window.innerHeight,
       left: 0,
-      behavior: "smooth"
+      behavior: "smooth",
+      pasive: true
     });
   };
 
