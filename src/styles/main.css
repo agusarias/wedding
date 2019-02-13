@@ -79,6 +79,15 @@
   margin-top: 1rem;
 }
 
+.section p a {
+  font-weight: bold;
+  color: inherit !important;
+}
+
+.section p a:hover {
+  text-decoration: underline;
+}
+
 .section .title {
   font-size: 6rem;
 }
