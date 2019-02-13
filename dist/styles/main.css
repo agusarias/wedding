@@ -37,7 +37,7 @@
 /* Mobile */
 .down {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   width: 100%;
   text-align: center;
   font-family: "Rouge Script", cursive;
@@ -56,16 +56,22 @@
 /* AGUS y NARE */
 .agusynare {
   position: absolute;
-  top: 40vh;
+  bottom: 4vh;
   width: 100%;
   text-align: center;
   font-family: "Rouge Script", cursive;
-  font-size: 10rem;
-  cursor: pointer;
+  font-size: 12vh;
+}
+
+/* Desktop */
+@media (min-width: 797px) {
+  .agusynare {
+    font-size: 10rem;
+  }
 }
 
 .section {
-  font-family: sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 /* Desktop */
@@ -79,9 +85,10 @@
 .section h2,
 .section h3,
 .section h4 {
-  font-family: "Zilla Slab", serif;
+  font-family: "Ovo", serif;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  letter-spacing: initial;
 }
 
 .section p a {
@@ -140,7 +147,7 @@
 }
 
 .section.fiesta {
-  background-color: #1b1b1b;
+  background-color: #383838;
   color: #f3f3f3;
 }
 
@@ -150,7 +157,7 @@
 }
 
 .footer p {
-  font-family: "Zilla Slab", serif;
+  font-family: "Ovo", serif;
   text-align: center;
 }
 
