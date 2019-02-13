@@ -28,7 +28,7 @@
 /*** Header ***/
 #header {
   background: #dcdcdc;
-  color: #fefae0;
+  color: #f3f3f3;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -135,21 +135,22 @@
 }
 
 .section.civil {
-  background-color: #464655;
-  color: #fefae0;
+  background-color: #f3f3f3;
+  color: #383838;
 }
 
 .section.fiesta {
-  background-color: #aa5042;
-  color: #fefae0;
+  background-color: #1b1b1b;
+  color: #f3f3f3;
 }
 
 .footer {
-  background-color: #464655;
-  color: #fefae0;
+  background-color: #f3f3f3;
+  color: #383838;
 }
 
 .footer p {
+  font-family: "Zilla Slab", serif;
   text-align: center;
 }
 
