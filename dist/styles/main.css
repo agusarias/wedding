@@ -159,6 +159,7 @@
 .footer p {
   font-family: "Ovo", serif;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .heart {
