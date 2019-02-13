@@ -28,6 +28,7 @@
 /*** Header ***/
 #header {
   background: #dcdcdc;
+  color: #fefae0;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -40,7 +41,6 @@
   width: 100%;
   text-align: center;
   font-family: "Rouge Script", cursive;
-  color: white;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -50,6 +50,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  min-height: 100vh;
 }
 
 /* AGUS y NARE */
@@ -59,13 +60,11 @@
   width: 100%;
   text-align: center;
   font-family: "Rouge Script", cursive;
-  color: white;
   font-size: 10rem;
   cursor: pointer;
 }
 
 .section {
-  color: black;
   font-family: sans-serif;
 }
 
@@ -105,20 +104,17 @@
   position: absolute;
   top: 5rem;
   right: 3vw;
-  color: #efd6ac;
-  border: 1px solid #efd6ac;
+  color: #fefae0;
+  border: 1px solid #fefae0;
   padding: 3px 12px;
   border-radius: 3px;
 }
 
-.section.civil {
-  background-color: #183a37;
-  color: #efd6ac;
-}
-
-.section.fiesta {
-  background-color: #432534;
-  color: #efd6ac;
+/* Desktop */
+@media (min-width: 797px) {
+  .section .details {
+    right: 0;
+  }
 }
 
 .map {
@@ -138,9 +134,19 @@
   }
 }
 
+.section.civil {
+  background-color: #464655;
+  color: #fefae0;
+}
+
+.section.fiesta {
+  background-color: #aa5042;
+  color: #fefae0;
+}
+
 .footer {
-  background-color: #c44900;
-  color: #efd6ac;
+  background-color: #464655;
+  color: #fefae0;
 }
 
 .footer p {
@@ -148,5 +154,5 @@
 }
 
 .heart {
-  color: #183a37;
+  color: #aa5042;
 }
