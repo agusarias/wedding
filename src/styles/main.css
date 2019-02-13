@@ -23,7 +23,6 @@
 }
 .map-container {
   max-width: 80rem;
-  padding-bottom: 5rem;
 }
 
 /*** Header ***/
@@ -70,6 +69,13 @@
   font-family: sans-serif;
 }
 
+/* Desktop */
+@media (min-width: 797px) {
+  .section {
+    padding-bottom: 3rem;
+  }
+}
+
 .section h1,
 .section h2,
 .section h3,
@@ -99,20 +105,20 @@
   position: absolute;
   top: 5rem;
   right: 3vw;
-  color: #0b0b0b;
-  border: 1px solid #0b0b0b;
+  color: #efd6ac;
+  border: 1px solid #efd6ac;
   padding: 3px 12px;
   border-radius: 3px;
 }
 
 .section.civil {
-  background-color: #f0e8de;
-  color: #0b0b0b;
+  background-color: #183a37;
+  color: #efd6ac;
 }
 
 .section.fiesta {
-  background-color: #d6e3d2;
-  color: #0b0b0b;
+  background-color: #432534;
+  color: #efd6ac;
 }
 
 .map {
@@ -132,10 +138,15 @@
   }
 }
 
+.footer {
+  background-color: #c44900;
+  color: #efd6ac;
+}
+
 .footer p {
   text-align: center;
 }
 
 .heart {
-  color: #b3c0a4;
+  color: #183a37;
 }
