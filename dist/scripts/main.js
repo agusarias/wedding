@@ -17,6 +17,19 @@ document.addEventListener("DOMContentLoaded", function() {
       pasive: true
     });
   };
+
+  var modals = ["civil", "fiesta"];
+  modals.forEach(function(key) {
+    find("trigger-" + key).onclick = function() {
+      var modal = find("modal-" + key);
+      modal.classList.add("active");
+      modal.querySelectorAll(".js-close").forEach(function(closeButton) {
+        closeButton.onclick = function() {
+          modal.classList.remove("active");
+        };
+      });
+    };
+  });
 });
 
 function showHeaderImage() {
