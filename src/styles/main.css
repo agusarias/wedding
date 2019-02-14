@@ -67,6 +67,7 @@
 @media (min-width: 797px) {
   .agusynare {
     font-size: 10rem;
+    bottom: 2vh;
   }
 }
 
@@ -79,6 +80,10 @@
   .section {
     padding-bottom: 3rem;
   }
+}
+
+.section h2 {
+  text-align: center;
 }
 
 .section h1,

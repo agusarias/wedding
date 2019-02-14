@@ -19,51 +19,19 @@ function createMapCivil() {
     lng: -58.4209346
   });
 
-  var sivoriMarkerOptions = {
-    map: map,
-    label: "Museo Sivori",
-    position: sivori
-  };
+  addMarker(
+    sivori,
+    map,
+    "https://www.google.com/maps/place/Museo+S%C3%ADvori/@-34.5691316,-58.4201594,17z/data=!4m8!1m2!3m1!2sMuseo+S%C3%ADvori!3m4!1s0x0:0x4808624945a2ee39!8m2!3d-34.5691317!4d-58.4179705",
+    "Museo Sivori"
+  );
 
-  sivoriMarkerOptions.icon = {
-    path:
-      "M10 13.9c-2.8-0.5-5-2.9-5-5.9 0-3.3 2.7-6 6-6 3.3 0 6 2.7 6 6 0 3-2.2 5.4-5 5.9l0 8.1 -2 0 0-8.1",
-    scale: 1.63,
-    anchor: new google.maps.Point(11, 22),
-    fillOpacity: 1,
-    fillColor: "#4c4c4c",
-    strokeOpacity: 0
-  };
-
-  var sivoriMarker = new google.maps.Marker(sivoriMarkerOptions);
-  sivoriMarker.addListener("click", function() {
-    window.open(
-      "https://www.google.com/maps/place/Museo+S%C3%ADvori/@-34.5691316,-58.4201594,17z/data=!4m8!1m2!3m1!2sMuseo+S%C3%ADvori!3m4!1s0x0:0x4808624945a2ee39!8m2!3d-34.5691317!4d-58.4179705"
-    );
-  });
-
-  var restaurantMarkerOptions = {
-    map: map,
-    label: "Williamsburg",
-    position: restaurant
-  };
-
-  restaurantMarkerOptions.icon = {
-    path:
-      "M10 13.9c-2.8-0.5-5-2.9-5-5.9 0-3.3 2.7-6 6-6 3.3 0 6 2.7 6 6 0 3-2.2 5.4-5 5.9l0 8.1 -2 0 0-8.1",
-    scale: 1.63,
-    anchor: new google.maps.Point(11, 22),
-    fillOpacity: 1,
-    fillColor: "#4c4c4c",
-    strokeOpacity: 0
-  };
-
-  var restaurantMarker = new google.maps.Marker(restaurantMarkerOptions);
-  restaurantMarker.addListener("click", function() {
-    window.open(
-      "https://www.google.com/maps/place/Williamsburg/@-34.5712206,-58.4224825,21z/data=!4m8!1m2!3m1!2sMuseo+S%C3%ADvori!3m4!1s0x95bcb56ac5f20c0d:0x7d30c057375354d1!8m2!3d-34.5712089!4d-58.4223533"
-    );
-  });
+  addMarker(
+    restaurant,
+    map,
+    "https://www.google.com/maps/place/Williamsburg/@-34.5712206,-58.4224825,21z/data=!4m8!1m2!3m1!2sMuseo+S%C3%ADvori!3m4!1s0x95bcb56ac5f20c0d:0x7d30c057375354d1!8m2!3d-34.5712089!4d-58.4223533",
+    "Williamsburg"
+  );
 }
 
 function createMapFiesta() {
@@ -95,9 +63,21 @@ function createMapFiesta() {
   arrivePath.setMap(map);
 
   // Marcador
+  addMarker(
+    quinta,
+    map,
+    "https://www.google.com/maps/place/34%C2%B037'51.9%22S+58%C2%B046'10.1%22W/@-34.6310782,-58.7716724,17z"
+  );
+}
+
+function addMarker(position, map, link, label) {
+  link = link || "";
+  label = label || "";
+
   var markerOptions = {
     map: map,
-    position: quinta
+    position: position,
+    label: label
   };
 
   markerOptions.icon = {
@@ -112,9 +92,7 @@ function createMapFiesta() {
 
   var marker = new google.maps.Marker(markerOptions);
   marker.addListener("click", function() {
-    window.open(
-      "https://www.google.com/maps/place/34%C2%B037'51.9%22S+58%C2%B046'10.1%22W/@-34.6310782,-58.7716724,17z"
-    );
+    window.open(link);
   });
 }
 
