@@ -115,6 +115,11 @@
   font-size: 6rem;
 }
 
+.section .title i {
+  font-size: 5rem;
+  font-style: normal;
+}
+
 /* Desktop */
 @media (min-width: 797px) {
   .section .details {
