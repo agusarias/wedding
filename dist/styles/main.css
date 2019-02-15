@@ -14,15 +14,18 @@
   .desktop {
     display: block;
   }
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 .container {
   max-width: 80rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  padding-right: 0;
-  padding-left: 0;
   position: relative;
 }
+
 .map-container {
   max-width: 80rem;
 }
@@ -112,19 +115,6 @@
   font-size: 6rem;
 }
 
-.section .details {
-  font-family: sans-serif;
-  letter-spacing: initial;
-  font-size: 1.3rem;
-  position: absolute;
-  top: 5rem;
-  right: 3vw;
-  color: #fefae0;
-  border: 1px solid #fefae0;
-  padding: 3px 12px;
-  border-radius: 3px;
-}
-
 /* Desktop */
 @media (min-width: 797px) {
   .section .details {
@@ -145,7 +135,7 @@
   padding: 4vw;
   font-size: 42pt;
   text-align: center;
-  color: white;
+  color: f0f0f0;
   background-size: cover;
 }
 
@@ -159,6 +149,10 @@
 
 .trigger.fiesta {
   background-image: url(../images/fiesta-mobile.jpg);
+}
+
+p {
+  margin-top: 0;
 }
 
 .map {
@@ -178,25 +172,36 @@
   }
 }
 
-.section.civil {
-  background-color: #383838;
-  color: #f3f3f3;
+.emoji-divider {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: -3rem;
+}
+
+.section.preface {
+  background-color: #f0f0f0;
+  color: #464655;
 }
 
 .section.fiesta {
-  background-color: #f3f3f3;
-  color: #383838;
+  background-color: #aa5042;
+  color: #f0f0f0;
+}
+.section.civil {
+  background-color: #464655;
+  color: #f0f0f0;
 }
 
 .footer {
-  background-color: #383838;
-  color: #f3f3f3;
+  background-color: #f0f0f0;
+  color: #464655;
 }
 
 .footer p {
   font-family: "Ovo", serif;
   text-align: center;
   margin-bottom: 0;
+  font-size: 2rem;
 }
 
 .heart {
