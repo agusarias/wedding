@@ -14,13 +14,15 @@
   .desktop {
     display: block;
   }
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 .container {
   max-width: 80rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  padding-right: 0;
-  padding-left: 0;
   position: relative;
 }
 .map-container {
