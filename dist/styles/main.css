@@ -184,22 +184,23 @@ p {
 }
 
 .section.preface {
-  background-color: #f0f0f0;
+  background-color: #e7e7e7;
   color: #464655;
 }
 
 .section.fiesta {
-  background-color: #aa5042;
-  color: #f0f0f0;
+  background-color: #f3f3f3;
+  color: #383838;
 }
+
 .section.civil {
-  background-color: #464655;
-  color: #f0f0f0;
+  background-color: #383838;
+  color: #f3f3f3;
 }
 
 .footer {
-  background-color: #f0f0f0;
-  color: #464655;
+  background-color: #f3f3f3;
+  color: #383838;
 }
 
 .footer p {
